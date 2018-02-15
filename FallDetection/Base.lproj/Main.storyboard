@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FallDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYJ-e9-8MK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="771313_593395911" translatesAutoresizingMaskIntoConstraints="NO" id="wdJ-Wz-Pva">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CaM-Tc-pM4" customClass="CustomedView" customModule="FallDetection" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="21" width="375" height="96"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fall Detection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFe-Jh-SKy">
+                                                <rect key="frame" x="89" y="35" width="181" height="26"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="ZFe-Jh-SKy" firstAttribute="top" secondItem="CaM-Tc-pM4" secondAttribute="top" constant="35" id="4oF-Lo-iKK"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZFe-Jh-SKy" secondAttribute="trailing" constant="105" id="LFC-eW-jsL"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZFe-Jh-SKy" secondAttribute="bottom" constant="35" id="afy-Gp-zyF"/>
+                                            <constraint firstItem="ZFe-Jh-SKy" firstAttribute="leading" secondItem="CaM-Tc-pM4" secondAttribute="leading" constant="89" id="liV-tN-HON"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqg-Ly-6Bb">
+                                        <rect key="frame" x="26" y="292" width="327" height="73"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="ZRT-ea-5kv"/>
+                                            <constraint firstAttribute="height" constant="73" id="vHn-ih-YOf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5F-NN-Ued">
+                                        <rect key="frame" x="135" y="461" width="105" height="30"/>
+                                        <state key="normal" title="Start Detection">
+                                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mTz-WH-Khz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egy-GB-Sa9">
+                                        <rect key="frame" x="137" y="518" width="103" height="30"/>
+                                        <state key="normal" title="Stop Detection">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFd-dU-Nrm"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Fall Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aB-Kg-olJ">
+                                        <rect key="frame" x="114" y="204" width="147" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="B5F-NN-Ued" firstAttribute="leading" secondItem="TYJ-e9-8MK" secondAttribute="leading" constant="135" id="1P5-yj-gHA"/>
+                                    <constraint firstAttribute="trailing" secondItem="nqg-Ly-6Bb" secondAttribute="trailing" constant="22" id="1cN-ra-k24"/>
+                                    <constraint firstAttribute="trailing" secondItem="CaM-Tc-pM4" secondAttribute="trailing" id="7gH-pq-HWo"/>
+                                    <constraint firstAttribute="trailing" secondItem="B5F-NN-Ued" secondAttribute="trailing" constant="135" id="9nk-6v-knL"/>
+                                    <constraint firstAttribute="bottom" secondItem="wdJ-Wz-Pva" secondAttribute="bottom" id="AIs-Vh-OBY"/>
+                                    <constraint firstAttribute="trailing" secondItem="wdJ-Wz-Pva" secondAttribute="trailing" id="KRY-bx-ePj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Egy-GB-Sa9" secondAttribute="bottom" constant="99" id="LrE-3Z-WMI"/>
+                                    <constraint firstItem="nqg-Ly-6Bb" firstAttribute="top" secondItem="8aB-Kg-olJ" secondAttribute="bottom" constant="65" id="MG1-Jt-aRo"/>
+                                    <constraint firstItem="8aB-Kg-olJ" firstAttribute="top" secondItem="CaM-Tc-pM4" secondAttribute="bottom" constant="87" id="Vn8-ET-MDY"/>
+                                    <constraint firstItem="wdJ-Wz-Pva" firstAttribute="leading" secondItem="TYJ-e9-8MK" secondAttribute="leading" id="YEv-Wh-5g2"/>
+                                    <constraint firstItem="wdJ-Wz-Pva" firstAttribute="top" secondItem="TYJ-e9-8MK" secondAttribute="top" id="bGh-v7-aAy"/>
+                                    <constraint firstItem="8aB-Kg-olJ" firstAttribute="leading" secondItem="TYJ-e9-8MK" secondAttribute="leading" constant="114" id="e7x-pK-dEf"/>
+                                    <constraint firstItem="CaM-Tc-pM4" firstAttribute="leading" secondItem="TYJ-e9-8MK" secondAttribute="leading" id="ens-Ro-VFl"/>
+                                    <constraint firstAttribute="trailing" secondItem="8aB-Kg-olJ" secondAttribute="trailing" constant="114" id="feM-na-uZB"/>
+                                    <constraint firstAttribute="trailing" secondItem="CaM-Tc-pM4" secondAttribute="trailing" id="h5f-9q-USu"/>
+                                    <constraint firstItem="B5F-NN-Ued" firstAttribute="top" secondItem="nqg-Ly-6Bb" secondAttribute="bottom" constant="96" id="j12-T7-ImU"/>
+                                    <constraint firstItem="CaM-Tc-pM4" firstAttribute="leading" secondItem="TYJ-e9-8MK" secondAttribute="leading" id="l3b-Zd-pqx"/>
+                                    <constraint firstItem="nqg-Ly-6Bb" firstAttribute="leading" secondItem="TYJ-e9-8MK" secondAttribute="leading" constant="26" id="m2c-fx-pyq"/>
+                                    <constraint firstItem="CaM-Tc-pM4" firstAttribute="top" secondItem="TYJ-e9-8MK" secondAttribute="top" constant="21" id="ovF-vy-Zlb"/>
+                                    <constraint firstItem="Egy-GB-Sa9" firstAttribute="top" secondItem="B5F-NN-Ued" secondAttribute="bottom" constant="27" id="rNr-Gc-Pyy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Egy-GB-Sa9" secondAttribute="trailing" constant="135" id="u0C-0j-t0j"/>
+                                    <constraint firstItem="Egy-GB-Sa9" firstAttribute="leading" secondItem="TYJ-e9-8MK" secondAttribute="leading" constant="137" id="zgM-SC-t5t"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TYJ-e9-8MK" secondAttribute="trailing" id="Sae-EP-Oy0"/>
+                            <constraint firstItem="TYJ-e9-8MK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TMB-le-o1U"/>
+                            <constraint firstItem="TYJ-e9-8MK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dYK-2C-VUT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TYJ-e9-8MK" secondAttribute="bottom" id="vjC-AT-RJh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="detectText" destination="nqg-Ly-6Bb" id="MMU-0f-AsK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="771313_593395911" width="2576" height="3480"/>
+    </resources>
+</document>
